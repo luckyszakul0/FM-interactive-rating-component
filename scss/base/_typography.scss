@@ -13,6 +13,7 @@
 }
 
 .rating{
-    @include typography(1rem, 1.5rem);
+    line-height: 0.75rem;
     color: $mediumGrey;
+    font-weight: 700;
 }

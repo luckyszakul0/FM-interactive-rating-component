@@ -1,0 +1,16 @@
+@use '../utilities' as *;
+
+.rates{
+    background: $darkBlue;
+    border: none;
+    border-radius: 50%;
+    @include flex(center, center, row);
+    // align-items: center;
+    width: 3.1875rem;
+    aspect-ratio: 1/1;
+
+    &_wrapper{
+        @include flex(center, center, row);
+        gap: 2rem;
+    }
+}
