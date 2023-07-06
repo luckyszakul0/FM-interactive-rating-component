@@ -1,0 +1,18 @@
+@use '../utilities' as *;
+
+.heading{
+    &_L{
+        @include typography(1.75rem, normal);
+        color: $white;
+    }
+
+    &_M{
+        @include typography(0.9375rem, normal);
+        color: $white;
+    }
+}
+
+.rating{
+    @include typography(1rem, 1.5rem);
+    color: $mediumGrey;
+}

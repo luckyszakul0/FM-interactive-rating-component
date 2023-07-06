@@ -1,0 +1,21 @@
+@use '../utilities' as *;
+
+.state{
+    background: $blackGradient;
+    padding: 2rem;
+    @include flex(flex-start, center, column);
+    gap: 2rem;
+    border-radius: 2rem;
+    width: min-content;
+
+    &_rating{
+        @extend .state;
+
+    }
+
+    &_thankyou{
+        //both display and opacity values to enable animation and to disable selecting of invisible text
+        display: none;
+        opacity: 0;
+    }
+}
