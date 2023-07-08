@@ -3,14 +3,38 @@
 .rates{
     background: $darkBlue;
     border: none;
-    border-radius: 50%;
-    @include flex(center, center, row);
-    // align-items: center;
-    width: 3.1875rem;
+    display: grid;
+    place-items: center;
     aspect-ratio: 1/1;
+    width: 3.1875rem;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.2s;
 
+    span{
+        position: relative;
+        top: 1px;
+    }
+    
     &_wrapper{
         @include flex(center, center, row);
-        gap: 2rem;
+        gap: 1.25rem;
+    }
+}
+
+.submit_btn{
+    width: 100%;
+    border-radius: 5rem;
+    border: none;
+    padding: 0.9rem 0 0.65rem 0;
+    background: $orange;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    cursor: pointer;
+    transition: all 0.2s;
+
+    &:hover{
+        background: $white;
+        color: $orange;
     }
 }

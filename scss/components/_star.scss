@@ -1,0 +1,12 @@
+@use '../utilities' as *;
+
+.star_container{
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    margin-bottom: 0.75rem;
+    aspect-ratio: 1/1;
+    padding: 1rem;
+    background: $darkBlue;
+
+}

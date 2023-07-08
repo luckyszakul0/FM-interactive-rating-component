@@ -4,16 +4,18 @@
     &_L{
         @include typography(1.75rem, normal);
         color: $white;
+        margin-bottom: -15px;
     }
 
     &_M{
         @include typography(0.9375rem, normal);
         color: $white;
+        font-weight: 700;
     }
 }
 
-.rating{
-    line-height: 0.75rem;
+.rating_text{
+    @include typography(1rem, 0.75rem);
     color: $mediumGrey;
     font-weight: 700;
 }
