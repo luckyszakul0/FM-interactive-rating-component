@@ -10,7 +10,9 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap" rel="stylesheet">
 
+  <!-- linking stylesheet and js file -->
   <link rel="stylesheet" href="./css/main.min.css">
+  <script src="./js/main.js" defer></script>
   <title>Frontend Mentor | Interactive rating component</title>
 
 </head>
@@ -40,14 +42,12 @@
     <!-- Thank you state start -->
     <section class="state_thankyou">
       <img src="./assets/illustration-thank-you.svg" alt="Thank you icon">
-      <p>You selected <span class="rating"></span> out of 5</p>
-      <div>
-        <h1>Thank you!</h1>
-        <p>
-          We appreciate you taking the time to give a rating. If you ever need more support,
-          don’t hesitate to get in touch!
-        </p>
-      </div>
+      <p class="given_rate_text">You selected <span class="given_rate">4</span> out of 5</p>
+      <h1 class="heading_L" id="thankyou_text">Thank you!</h1>
+      <p>
+        We appreciate you taking the time to give a rating. If you ever need more support,
+        don’t hesitate to get in touch!
+      </p>
     </section>
     <!-- Thank you state end -->
 
