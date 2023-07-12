@@ -6,8 +6,12 @@
     @include flex(flex-start, center, column);
     gap: 1.65rem;
     border-radius: 2rem;
-    width: min-content;
     width: 410px;
+
+    @media screen and (max-width: 430px) {
+        width: 92.5vw;
+        padding: 1.5rem;
+    }
 
     &_rating{
         @extend .state;

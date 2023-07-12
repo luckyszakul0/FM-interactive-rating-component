@@ -19,6 +19,16 @@
     &_wrapper{
         @include flex(center, center, row);
         gap: 1.25rem;
+
+        @media screen and (max-width: 430px) {
+            gap: 4.5vw;
+        }
+        @media screen and (max-width: 415px) {
+            gap: 4vw;
+        }
+        @media screen and (max-width: 360px) {
+            gap: 2.75vw;
+        }
     }
 }
 
