@@ -32,6 +32,15 @@
     }
 }
 
+button[data-clicked="true"], button[data-clicked="false"]:hover{
+    color: $white;
+    background: $orange;
+}
+
+.old_rate{
+    background: $mediumGrey;
+}
+
 .submit_btn{
     width: 100%;
     border-radius: 5rem;
