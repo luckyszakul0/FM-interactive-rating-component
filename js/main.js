@@ -1,36 +1,41 @@
 const ratesBtns = document.querySelectorAll(".rates"); //array of all the rates
-let notClickedFlag = false;
+let clickedIndex = null;
 
 window.onload = function main(){
 
     ratesBtns.forEach((rate) => {
-        rate.addEventListener("click", () => handlingClicking(rate));
         rate.addEventListener("mouseover", () => handlingMouseOver(rate));
         rate.addEventListener("mouseout", () => handlingMouseOut(rate));
+        rate.addEventListener("click", () => handlingClicking(rate));
     })
 
 }
 
 function handlingClicking(button){
+    //
     button.classList.add("current_rate");
     button.setAttribute("data-clicked", "true");
+
+    if(clickedIndex != null){
+        ratesBtns[clickedIndex].classList.remove("current_rate");
+        ratesBtns[clickedIndex].classList.remove("old_rate");
+        ratesBtns[clickedIndex].setAttribute("data-clicked", "false");
+    }
+
+    clickedIndex = button.getAttribute("data-index");
 }
 
 function handlingMouseOver(button){
-    ratesBtns.forEach((ryba) => {
-        if(ryba.getAttribute("data-clicked") == "true" && button.getAttribute("data-clicked") != "true"){
-            notClickedFlag = true;
+    button.classList.add("current_rate");
 
-            ryba.classList.add("old_rate");
-            ryba.classList.remove("current_rate");
-            button.classList.add("current_rate");
-        }
-    })
+    if(clickedIndex != null)
+        ratesBtns[clickedIndex].classList.add("old_rate");
 }
 
 function handlingMouseOut(button){
-    if(notClickedFlag){
+    if(button.getAttribute("data-clicked") == "false")
         button.classList.remove("current_rate");
 
-    }
+    if(clickedIndex != null)
+        ratesBtns[clickedIndex].classList.remove("old_rate");
 }
