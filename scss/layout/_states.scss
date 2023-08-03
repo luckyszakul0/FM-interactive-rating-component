@@ -1,5 +1,6 @@
 @use '../utilities' as *;
 
+//two animations used when submit button is clicked to fade out the rate state and fade in the thank you state
 @keyframes slideUpAndDissapear{
     from{
         transform: translateY(0);
@@ -21,6 +22,7 @@
         opacity: 1;
     }
 }
+
 
 .state{
     background: $blackGradient;
