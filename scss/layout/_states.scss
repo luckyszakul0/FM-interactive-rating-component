@@ -1,5 +1,27 @@
 @use '../utilities' as *;
 
+@keyframes slideUpAndDissapear{
+    from{
+        transform: translateY(0);
+        opacity: 1;
+    }
+    to{
+        transform: translateY(-400px);
+        opacity: 0;
+    }
+}
+
+@keyframes slideUpAndAppear{
+    from{
+        transform: translateY(200px);
+        opacity: 0;
+    }
+    to{
+        transform: translateY(-200px);
+        opacity: 1;
+    }
+}
+
 .state{
     background: $blackGradient;
     padding: 2rem;
@@ -15,6 +37,7 @@
 
     &_rating{
         @extend .state;
+        // animation: slideUpAndDissapear 0.85s forwards;
     }
 
     &_thankyou{
@@ -24,8 +47,10 @@
         padding: 2.5rem 2rem;
         gap: 2rem;
         //both display and opacity values to enable animation and to disable selecting of invisible text
+        transform: translateY(200px);
         display: none;
         opacity: 0;
+        // animation: slideUpAndAppear 0.85s forwards;
 
         .given_rate_text{
             width: fit-content;
