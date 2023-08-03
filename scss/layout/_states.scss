@@ -2,23 +2,29 @@
 
 //two animations used when submit button is clicked to fade out the rate state and fade in the thank you state
 @keyframes slideUpAndDissapear{
-    from{
+    0%{
         transform: translateY(0);
         opacity: 1;
     }
-    to{
-        transform: translateY(-400px);
+    70%{
         opacity: 0;
+    }
+    100%{
+        opacity: 0;
+        transform: translateY(-400px);
     }
 }
 
 @keyframes slideUpAndAppear{
-    from{
-        transform: translateY(200px);
+    0%{
+        transform: translateY(0);
         opacity: 0;
     }
-    to{
-        transform: translateY(-200px);
+    1%{
+        transform: scale(1);
+    }
+    100%{
+        transform: translateY(-510px);
         opacity: 1;
     }
 }
@@ -31,6 +37,7 @@
     gap: 1.65rem;
     border-radius: 2rem;
     width: 410px;
+    position: absolute;
 
     @media screen and (max-width: 430px) {
         width: 92.5vw;
@@ -39,7 +46,6 @@
 
     &_rating{
         @extend .state;
-        // animation: slideUpAndDissapear 0.85s forwards;
     }
 
     &_thankyou{
@@ -48,11 +54,10 @@
         text-align: center;
         padding: 2.5rem 2rem;
         gap: 2rem;
+        top: 300px;
         //both display and opacity values to enable animation and to disable selecting of invisible text
-        transform: translateY(200px);
-        display: none;
+        transform: scale(0);
         opacity: 0;
-        // animation: slideUpAndAppear 0.85s forwards;
 
         .given_rate_text{
             width: fit-content;

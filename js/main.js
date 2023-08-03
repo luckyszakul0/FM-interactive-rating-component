@@ -22,8 +22,15 @@ window.onload = function main(){
                 submitBtn.style.animation = null;
             }, 500)
         } else {
-            rateState.style.animation = "slideUpAndDissapear 0.85s forwards";
-            thankYouState.style.animation = "slideUpAndAppear 0.85s forwards";
+            //animate both states to slide up and appear/disappear, additionally delete the rate state after it's animation finishes
+            rateState.style.animation = "slideUpAndDissapear 0.5s forwards";
+            setTimeout(() => {
+                rateState.style.display = "none";
+            }, 500);
+            thankYouState.style.animation = "slideUpAndAppear 0.8s forwards";
+
+            //insert the given rate into the text on the thank you card
+            document.querySelector(".given_rate").innerHTML = (parseInt(clickedIndex) + 1);
         }
     })
 

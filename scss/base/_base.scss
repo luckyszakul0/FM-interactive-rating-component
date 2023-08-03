@@ -19,3 +19,8 @@ body{
     color: $lightGrey;
     @include flex(center, center, row);
 }
+
+main{
+    @include flex(center, center, row);
+    position: relative;
+}
