@@ -33,8 +33,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [Frontend Mentor solution](https://www.frontendmentor.io/solutions/interactive-rating-with-desktopfirst-approach-and-some-animations-0Q_fwBSb7r)
+- Live Site URL: [Github Pages](https://luckyszakul0.github.io/FM-interactive-rating-component/)
 
 ## My process
 
