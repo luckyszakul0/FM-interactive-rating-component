@@ -59,4 +59,4 @@ Overall, in this challenge I wanted to focus more on the JS portion, so I didn't
 ## Author
 
 - Github - [Łukasz Lubaszewski](https://github.com/luckyszakul0)
-- Frontend Mentor - [@Lukasz710](https://www.frontendmentor.io/profile/Lukasz710)
+- Frontend Mentor - [@luckyszakul0](https://www.frontendmentor.io/profile/luckyszakul0)
